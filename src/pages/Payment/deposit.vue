@@ -12,7 +12,7 @@
           </div>
           <div class="btn-unionPay">
             <button @click="payType('unionPayOnline')">网银支付</button>
-            <button @click="payType('unionPayOffline')">银联线下</button>
+            <button @click="payType('unionPayOffline')" class="closed">银联线下</button>
           </div>
         </el-col>
 
@@ -21,9 +21,13 @@
          <!--    <img src="../../assets/images/common/icon/withdraw-alipay.png" class="ico">
             <h5>支付宝支付</h5>   -->          
           </div>
-          <div class="btn-aliPay">
+         <!--  <div class="btn-aliPay">
             <button @click="payType('aliPayOnline')">支付宝支付</button>
-            <button @click="payType('aliPayOffline')">支付宝线下</button>
+            <button @click="payType('aliPayOffline')" class="closed">支付宝线下</button>
+          </div> -->
+          <div class="btn-aliPay">
+            <button @click="payType('jdPayOnline')">京东支付</button>
+            <button @click="payType('jdPayOffline')" class="closed">京东线下</button>
           </div>
         </el-col>
 
@@ -33,8 +37,8 @@
             <h5>微信支付</h5>   -->                      
           </div>
           <div class="btn-wechatPay">
-            <button @click="payType('wechatPayOnline')">微信支付</button>
-            <button @click="payType('wechatPayOffline')">微信线下</button>
+            <button @click="payType('wechatPayOnline')" class="closed">微信支付</button>
+            <button @click="payType('wechatPayOffline')" class="closed">微信线下</button>
           </div>
         </el-col>
 
@@ -44,8 +48,8 @@
             <h5>财付通</h5>    -->          
           </div>
           <div class="btn-caiPay">
-            <button @click="payType('tenPayOnline')">财付通支付</button>
-            <button @click="payType('tenPayOffline')">财付通线下</button>
+            <button @click="payType('tenPayOnline')" class="closed">财付通支付</button>
+            <button @click="payType('tenPayOffline')" class="closed">财付通线下</button>
           </div>
         </el-col>
 
@@ -55,8 +59,8 @@
             <h5>QQ钱包</h5>    -->                     
           </div>
           <div class="btn-qqPay">
-            <button>QQ钱包</button>
-            <button>QQ线下</button>
+            <button class="closed">QQ钱包</button>
+            <button class="closed">QQ线下</button>
           </div>
         </el-col>
 

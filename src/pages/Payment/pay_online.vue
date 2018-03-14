@@ -28,7 +28,7 @@
           <el-col :span="3" v-for='(item,index) in list'><div ref='xuan' class="btn-number"  @click="select(item,index)">{{item}}</div></el-col>
         </el-row>
 
-        <el-row>
+        <el-row v-if="payType != 'jdPayOnline'">
             <el-col :span="2">
                 <div class="grid-content bg-purple-dark" >
                  <p class="pay-title">选择银行：</p>
@@ -204,22 +204,26 @@ export default {
          } else {
           params.username = 'sim123';
          }
-        
-        params.payType = 1;
-        params.orderNo = '6834354';
-        params.bankCode = 'CMB';
-        params.amount = this.shu;
-        this.$emit('child-step','step');
-        
-        // JSON.stringify({"username":"sim123","payType":1,"orderNo":"6834354","bankCode":"CMB","amount":100})
+
+        if (this.payType === 'jdPayOnline') {  // 京东
+          params.payType = 4;
+          params.bankCode = 'JDPAY';
+          params.amount = this.shu;
+          // params.orderNo = `${new Date().getTime()}`;
+          params.orderNo = '8612329';
+        } 
+        // this.$emit('child-step','step');
+ 
         this.$http.post('http://103.85.21.46:8080/onlinePay', JSON.stringify(params),{headers}).then(res => {
           this.btnLoading = false;
- 
+          console.log(res)
+          // console.log(res.data.msg)
           if (res.data.msg === 'success') {
+            console.log(res.data.data)
             // window.open(res.data.data) 
-            this.$http.post(res.data.data, JSON.stringify(),{headers}).then(response => {
+            /*this.$http.post(res.data.data, JSON.stringify(),{headers}).then(response => {
               console.log(response)
-            });
+            });*/
           }
         });
 

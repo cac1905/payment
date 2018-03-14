@@ -22,11 +22,10 @@
           <Tabs v-model="activeName" @tab-click="handleClick">
               <span class="ico-nav-deposit"></span>
               <TabPane label="在线存款" style="font-size: 18px;">
-                <div class="steps" v-if="xian">
+                <div class="steps" v-if="xian" style="display: none;">
                   <el-steps :active="active" finish-status="success">
                     <el-step title="选择充值/转款"></el-step>
                     <el-step title="选择银行/金额"></el-step>
-                    <!-- <el-step title="第三方支付"></el-step> -->
                     <el-step title="完成"></el-step>
                   </el-steps>
                   <!-- <el-button style="margin-top: 12px;" @click="next">下一步</el-button> -->
@@ -338,10 +337,10 @@ export default {
       // this.next();
       this.active=1;
       this.payType = type;
-      if (type === 'unionPayOffline' || type === 'aliPayOffline' || type === 'wechatPayOffline') {
+      if (type === 'unionPayOffline' || type === 'aliPayOffline' || type === 'wechatPayOffline' || type === 'jdPayOffline') {
         this.isShowDeposit = false
         this.isShowOfflinePay = true
-      } else if (type === 'unionPayOnline' || type === 'aliPayOnline' || type === 'wechatPayOnline' || type === 'tenPayOnline') {
+      } else if (type === 'unionPayOnline' || type === 'aliPayOnline' || type === 'wechatPayOnline' || type === 'tenPayOnline' || type === 'jdPayOnline') {
         this.isShowDeposit = false
         this.isShowOfflinePay = false
         this.isShowOnlinePay = true
