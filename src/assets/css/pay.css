@@ -1,0 +1,343 @@
+/*投注区*/
+
+ 
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #bbb;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #bbb;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #bbb;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #bbb;
+}
+.f-l {
+  // margin-top: 10px;
+  float: left;
+}
+.f-r {
+  float: right;
+}  
+
+.moneyManage-page {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content h3.title {
+  font-size: 16px;
+  text-align: left;
+  color: #333;
+  height: 35px;
+  line-height: 35px;
+  background-color: #f1f3f8;
+  font-weight: normal;
+  text-indent: 15px;
+}  
+ 
+.common-content {
+  background-color: #fbfbfb;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.clearfix:after{
+    display:block;
+    content: '';
+    clear:both;
+} 
+.common-content .el-table--striped .el-table__body tr.el-table__row--striped td {
+    background: #f8f9fb;
+}
+.common-content .el-table th.is-leaf {
+  border-bottom: none;
+  background-color: #f1f3f8;
+  border-top: 1px solid #ddd;
+  padding: 2px 0;
+}
+#pane-all .history  .el-table th:nth-child(5),
+ .moneyManage .el-table th:nth-child(7),
+.result-page .el-table th:nth-child(3) {
+  border-right: 2px solid #ddd;  
+}
+.common-content .el-table__header-wrapper {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;  
+}
+.common-content .el-table {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;  
+} 
+.common-content .el-table th.is-leaf:first-child {
+  border-left: 1px solid #ddd;
+}
+.common-content .el-table th:last-child {
+  border-right: 1px solid #ddd;
+}
+
+.common-content .el-tabs__item.is-active {
+    text-align: center;
+    padding: 0 20px;
+}
+.common-content .el-tabs--bottom .el-tabs__item:nth-child(2),
+.common-content  .el-tabs--top .el-tabs__item:nth-child(2) {
+    padding: 0 10px;
+}
+  
+.common-content .el-tabs__nav-wrap::after {
+  background-color: #fff;
+}
+ 
+.el-table--border::after, .el-table--group::after, .el-table::before {
+    background-color: #fff;
+}
+
+.el-table::before {
+  height: 6px!important;
+  background-color: #fff!important;
+}
+.el-table__row:last-child td {
+  border-bottom: 2px solid #ddd!important;
+}   
+ 
+.userSetData .ivu-tabs {
+  overflow-y: hidden;
+  overflow-y: auto;
+  font-size: 15px;
+} 
+.userSet {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+  height: 90px;
+  margin-bottom: 30px;
+}
+.userSet .avatar {
+  width: 72px;
+  height: 72px;
+  text-align: center;
+  background-color: #c0c4cc;
+  border-radius: 50%; 
+
+}
+.userSet .avatar img {
+  margin-top: 10px;
+  width: 50px;
+}
+.userSet .ivu-avatar {
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+  background: none;
+}
+.userSet .ivu-icon-person { 
+    font-size: 50px;
+    line-height: 66px;
+}
+.userSet .user_info {
+    margin-top: 10px;
+}
+.ivu-tabs-nav .ivu-icon-plus-circled,
+.ivu-tabs-nav .ivu-icon-card,
+.ivu-tabs-nav .ivu-icon-clipboard {
+    font-size: 24px;
+    color: #bbbec4;
+    width: 24px!important;
+    height: 24px!important;
+    vertical-align: middle;
+}
+.userSet .user_info p {
+    font-size: 14px;
+    color: #666;
+    line-height: 24px;
+    text-align: left;
+    margin-left: 10px;
+}
+.userSet .user_info p span {
+  color: #00b38b;
+}
+ .moneyManage .el-tabs__item.is-active {
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+.moneyManage .el-tabs__item.is-active:after {
+  position: absolute;
+  left: 40%;
+  bottom: -4px;
+  content: '';
+  width: 0;
+  height: 0;
+  border-width: 0 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #fff;
+  position: absolute;
+}
+.moneyManage .el-tabs__active-bar {
+  display: none;
+}
+.moneyManage .el-tabs__item,
+.moneyManage .el-tabs__nav-scroll {
+  margin-right: 0;
+  height: 40px;
+  line-height: 40px;
+}
+.moneyManage .el-tabs__item {
+  height: 38px;
+  border-radius: 0;
+}
+.el-step__head {
+    text-align: left;
+}
+
+
+.steps .el-step__title.is-process {
+  font-weight: normal;
+  font-size: 14px;
+  color: #453880;
+}
+.steps .el-step__title.is-wait {
+    color: #cccccc;
+}
+.payment h4 {
+  color: #453880;
+  font-size: 15px;
+  text-align: left;
+  border-top: 1px solid #e6e6f0;
+  border-bottom: 1px solid #e6e6f0;
+  height: 35px;
+  line-height: 35px;
+}
+.payment h4 span {
+  margin:0 5px;
+  color: #5215e0;
+}
+.payment .el-col {
+  border-radius: 4px;
+}
+.payment .el-row {
+  margin-left: 0!important;
+  margin-right: 0!important;
+}
+
+.payment .bg-purple {
+  background: #d3dce6;
+}
+
+.payment .grid-content {
+  border-radius: 4px;
+  min-height: 36px;
+  height: 201px;
+  width: 220px;
+  padding-top: 5px; 
+}
+.steps { 
+  padding: 25px 0;
+}
+.pay-methods {
+  margin-top: 20px;
+}
+#unionPay {
+  /*background-color: #19746c;*/
+  background: url('../images/icon/ico-unionPay.png') no-repeat;
+}
+#aliPay {
+  /*background-color: #00a7f2;*/
+  background: url('../images/icon/ico-aliPay.png') no-repeat;
+}
+#wechatPay {
+  /*background-color: #23ac38;*/
+  background: url('../images/icon/ico-wechatPay.png') no-repeat;
+}
+#qqPay {
+  /*background-color: #726fb1;*/
+  background: url('../images/icon/ico-qqPay.png') no-repeat;
+}
+#caiPay {
+  /*background-color: #ff6600; */
+  background: url('../images/icon/ico-tenPay.png') no-repeat;
+}
+.payment .el-col button {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  height: 45px;
+  line-height: 45px;
+  font-size: 14px;
+  color: #666;
+  width: 50%;
+  cursor: pointer;
+  outline: none;
+}
+.payment .el-col button:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-right: -6px;
+}
+.payment .el-col button:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.payment .el-col button.active,
+.payment .el-col button:hover {
+  background-color: #999;
+  border-color: #999;
+  color: #fff;
+  transition: all ease .5s;
+}
+.payment .el-col button.closed {
+  cursor: not-allowed;
+  color: #cccccc;
+}
+.payment .el-col button.closed:hover {
+  background-color: #fff;
+  border-color: #ddd;
+}
+
+.pay-methods .ico {
+  font-size: 22px;
+  color: #fff;
+  display: block;
+  height: 80px;
+  width: 80px;
+  margin: 0 auto;
+  text-align: center; 
+  margin-top: 10px;
+}
+.pay-methods h5 {
+  font-size: 22px;
+  color: #fff;
+  margin-top: 8px;
+}
+.payment .tips {
+  font-size: 14px;
+  color: #666;
+  text-align: left;
+  line-height: 30px;
+  margin-top: 30px;
+}
+.tips-title {
+  font-size: 15px;
+  color: #333;
+}
+.btn-unionPay,
+.btn-aliPay,
+.btn-wechatPay,
+.btn-qqPay,
+.btn-tenPay {
+    text-align: left;
+    width: 220px;
+} 
+.pay-item {
+    width: 232px!important;
+    padding:0 !important;
+}
+.ivu-tabs .ivu-tabs-tabpane {
+    background-color: #f1f1f1;
+    border-radius: 10px; 
+    padding: 15px;  
+}
+.ivu-tabs .ivu-tabs-tabpane .el-main {
+  background-color: #fff;
+}
