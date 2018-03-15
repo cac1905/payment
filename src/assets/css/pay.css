@@ -238,28 +238,10 @@
 }
 .pay-methods {
   margin-top: 20px;
+  display: flex;
 }
-#unionPay {
-  /*background-color: #19746c;*/
-  background: url('../images/icon/ico-unionPay.png') no-repeat;
-}
-#aliPay {
-  /*background-color: #00a7f2;*/
-  background: url('../images/icon/ico-aliPay.png') no-repeat;
-}
-#wechatPay {
-  /*background-color: #23ac38;*/
-  background: url('../images/icon/ico-wechatPay.png') no-repeat;
-}
-#qqPay {
-  /*background-color: #726fb1;*/
-  background: url('../images/icon/ico-qqPay.png') no-repeat;
-}
-#caiPay {
-  /*background-color: #ff6600; */
-  background: url('../images/icon/ico-tenPay.png') no-repeat;
-}
-.payment .el-col button {
+ 
+.pay-box button {
   background-color: #fff;
   border: 1px solid #ddd;
   height: 45px;
@@ -270,27 +252,27 @@
   cursor: pointer;
   outline: none;
 }
-.payment .el-col button:first-child {
+.pay-box button:first-child {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   margin-right: -6px;
 }
-.payment .el-col button:last-child {
+.pay-box  button:last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.payment .el-col button.active,
-.payment .el-col button:hover {
+.pay-box  button.active,
+.pay-box  button:hover {
   background-color: #999;
   border-color: #999;
   color: #fff;
   transition: all ease .5s;
 }
-.payment .el-col button.closed {
+.pay-box  button.closed {
   cursor: not-allowed;
   color: #cccccc;
 }
-.payment .el-col button.closed:hover {
+.pay-box  button.closed:hover {
   background-color: #fff;
   border-color: #ddd;
 }
@@ -321,14 +303,7 @@
   font-size: 15px;
   color: #333;
 }
-.btn-unionPay,
-.btn-aliPay,
-.btn-wechatPay,
-.btn-qqPay,
-.btn-tenPay {
-    text-align: left;
-    width: 220px;
-} 
+  
 .pay-item {
     width: 232px!important;
     padding:0 !important;
@@ -340,4 +315,83 @@
 }
 .ivu-tabs .ivu-tabs-tabpane .el-main {
   background-color: #fff;
+}
+
+
+
+
+
+
+/*new style*/
+.pay-box {
+  min-width: 15%;
+  background-color: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  margin: 20px 15px 0 0;
+  min-height: 180px;
+}
+.pay-box:last-child {
+  margin: 20px 0 0 0;
+}
+.pay-box h2,
+.pay-box h3 {
+  margin: 0;
+  padding: 0;
+}
+.pay-box h2 {
+  background-color: #0e747a;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.pay-box h3 { 
+  width: 110px;
+  height: 110px; 
+  margin: 20px auto; 
+}
+.qqPay-box h2 {
+  background-color: #ca2b2b;
+}
+.jdPay-box h2 {
+  background-color: #ca2b2b;
+}
+.wechatPay-box h2 {
+  background-color: #23ac38;
+}
+.aliPay-box h2 {
+  background-color: #2694cb;
+}
+.cftPay-box h2 {
+  background-color: #eb5b18;
+}
+.qqPay-box h2 {
+  background-color: #5095d1;
+} 
+
+.onlinePay-box h3 {
+  background: url("../images/icon/icon-paymethods-online.jpg") no-repeat;
+}
+.jdPay-box h3 {
+  background: url("../images/icon/icon-paymethods-jdpay.jpg") no-repeat;
+}
+.wechatPay-box h3 {
+  background: url("../images/icon/icon-paymethods-wechatpay.jpg") no-repeat;
+}
+.ali-box h3 {
+  background: url("../images/icon/icon-paymethods-alipay.jpg") no-repeat;
+}
+.cftPay-box h3 {
+  background: url("../images/icon/icon-paymethods-cftpay.jpg") no-repeat;
+  width: 140px;
+}
+.qqPay-box h3 {
+  background: url("../images/icon/icon-paymethods-qqpay.jpg") no-repeat;
+}
+.select-Bank {
+    margin-top: 30px;
 }

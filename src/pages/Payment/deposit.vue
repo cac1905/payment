@@ -3,78 +3,61 @@
 
     <h4><i class="ico ico-my-paymethods"></i>请选择适合您的充值方式</h4>
 
-    <div class="pay-methods">
-      <el-row :gutter="20">
-        <el-col :span="4" class="pay-item">
-          <div class="grid-content bg-purple" id="unionPay">
-            <!-- <img src="../../assets/images/common/icon/withdraw-unionpay.png" class="ico">
-            <h5>银联支付</h5> -->
-          </div>
-          <div class="btn-unionPay">
-            <button @click="payType('unionPayOnline')">网银支付</button>
-            <button @click="payType('unionPayOffline')" class="closed">银联线下</button>
-          </div>
-        </el-col>
+    <div class="pay-methods clearfix">
+      <div class="pay-box onlinePay-box">
+        <h2>欢迎使用</h2>
+        <h3></h3>
+        <div class="btn-unionPay">
+          <button @click="payType('unionPayOnline')">网银支付</button>
+          <button @click="payType('unionPayOffline')" class="closed">银联线下</button>
+        </div>
+      </div>
 
-        <el-col :span="4" class="pay-item">
-          <div class="grid-content bg-purple" id="aliPay">
-         <!--    <img src="../../assets/images/common/icon/withdraw-alipay.png" class="ico">
-            <h5>支付宝支付</h5>   -->          
-          </div>
-         <!--  <div class="btn-aliPay">
-            <button @click="payType('aliPayOnline')">支付宝支付</button>
-            <button @click="payType('aliPayOffline')" class="closed">支付宝线下</button>
-          </div> -->
-          <div class="btn-aliPay">
-            <button @click="payType('jdPayOnline')">京东支付</button>
-            <button @click="payType('jdPayOffline')" class="closed">京东线下</button>
-          </div>
-        </el-col>
+      <div class="pay-box jdPay-box">
+        <h2>欢迎使用</h2>
+        <h3></h3>
+        <div class="btn-unionPay">
+          <button @click="payType('unionPayOnline')">京东支付</button>
+          <button @click="payType('unionPayOffline')" class="closed">京东线下</button>
+        </div>
+      </div>
 
-        <el-col :span="4" class="pay-item">
-          <div class="grid-content bg-purple" id="wechatPay">
-           <!--  <img src="../../assets/images/common/icon/withdraw-wechatpay.png" class="ico">
-            <h5>微信支付</h5>   -->                      
-          </div>
-          <div class="btn-wechatPay">
-            <button @click="payType('wechatPayOnline')" class="closed">微信支付</button>
-            <button @click="payType('wechatPayOffline')" class="closed">微信线下</button>
-          </div>
-        </el-col>
+      <div class="pay-box wechatPay-box">
+        <h2>欢迎使用</h2>
+        <h3></h3>
+        <div class="btn-wechatPay">
+          <button @click="payType('wechatPayOnline')" class="closed">微信支付</button>
+          <button @click="payType('wechatPayOffline')" class="closed">微信线下</button>
+        </div>
+      </div>
 
-        <el-col :span="4" class="pay-item" v-if="opening">
-          <div class="grid-content bg-purple" id="caiPay">
-          <!-- <img src="../../assets/images/common/icon/withdraw-cai.png" class="ico">
-            <h5>财付通</h5>    -->          
-          </div>
-          <div class="btn-caiPay">
-            <button @click="payType('tenPayOnline')" class="closed">财付通支付</button>
-            <button @click="payType('tenPayOffline')" class="closed">财付通线下</button>
-          </div>
-        </el-col>
+      <div class="pay-box ali-box">
+        <h2>欢迎使用</h2>
+        <h3></h3>
+        <div class="btn-aliPay">
+          <button @click="payType('aliPayOnline')" class="closed">支付宝支付</button>
+          <button @click="payType('aliPayOffline')" class="closed">支付宝线下</button>
+        </div>
+      </div>
 
-        <el-col :span="4" class="pay-item">
-          <div class="grid-content bg-purple" id="qqPay">
-          <!--   <img src="" class="ico">
-            <h5>QQ钱包</h5>    -->                     
-          </div>
-          <div class="btn-qqPay">
-            <button class="closed">QQ钱包</button>
-            <button class="closed">QQ线下</button>
-          </div>
-        </el-col>
+      <div class="pay-box cftPay-box">
+        <h2>欢迎使用</h2>
+        <h3></h3>
+        <div class="btn-caiPay">
+          <button @click="payType('tenPayOnline')" class="closed">财付通支付</button>
+          <button @click="payType('tenPayOffline')" class="closed">财付通线下</button>
+        </div>
+      </div>
 
-        <!-- <el-col :span="4">
-          <div class="grid-content bg-purple">
-            <img src="" class="ico">
-            <h5>即将推出</h5>                        
-          </div>
-          <div class="btn-comingsoon">
-            <button class="closed">即将推出</button>
-            <button class="closed">即将推出</button>
-          </div>
-        </el-col> -->
-      </el-row>
+      <div class="pay-box qqPay-box">
+        <h2>欢迎使用</h2>
+        <h3></h3>
+        <div class="btn-qqPay">
+          <button class="closed">QQ钱包</button>
+          <button class="closed">QQ线下</button>
+        </div>
+      </div>
+
     </div>
     <div class="tips">
       <p class="tips-title">特别提示：</p>  

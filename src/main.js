@@ -8,8 +8,10 @@ import 'iview/dist/styles/iview.css';
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import Axios from 'axios'
-import qs from 'qs' 
+import qs from 'qs'  
 Vue.prototype.$http = Axios
+import VueQriously from 'vue-qriously'
+Vue.use(VueQriously)
 
 
 Axios.defaults.baseURL = 'http://api.alcp66.com';

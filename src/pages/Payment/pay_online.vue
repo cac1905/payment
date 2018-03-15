@@ -24,18 +24,19 @@
 
         </el-row>
  
-        <el-row :gutter="20" style='margin-top:40px;'>
+        <el-row :gutter="20" style='margin-top:20px;'>
           <el-col :span="3" v-for='(item,index) in list'><div ref='xuan' class="btn-number"  @click="select(item,index)">{{item}}</div></el-col>
         </el-row>
 
-        <el-row v-if="payType != 'jdPayOnline'">
+        <el-row v-if="payType != 'jdPayOnline'" class="select-Bank">
             <el-col :span="2">
-                <div class="grid-content bg-purple-dark" >
+                <div class=" bg-purple-dark" >
                  <p class="pay-title">选择银行：</p>
                 </div>
             </el-col>
 
-            <el-col :span="6"><div class="grid-content bg-purple-dark">
+            <el-col :span="6">
+              <div class="">
                 <el-select style='height:28px;line-height:28px;outline:none;width:100%;' v-model="selectBank" placeholder="请选择">
                     <el-option
                       v-for="item in options"
@@ -55,17 +56,24 @@
                 <span v-else>提交中...</span>
               </Button> 
         </div> 
+        <div v-if="showCode">
+          <qriously :value="initQCode" :size="200"/> 
+          <p>请扫码完成支付！</p>
+        </div>
+ 
+        
     </div>
    <!--  <div v-if='!subm'>
         <iframe style='width:100%;height:400px;' :src='dizhi'></iframe>
     </div> -->
   </div>
 </template>
-<script>
-    // import Dialog from './dialog'
+<script> 
 export default {
   data () {
     return {
+      initQCode: '你自定定义的值',
+      showCode: false,
       moneyMin: 0,
       moneyMax: 0,
       bankName: '',
@@ -92,7 +100,7 @@ export default {
     }
   },
   created () {
-    // this.getPayData ();
+    // this.getPayData (); 
   },
   methods: {
     chkInput (shu) {  
@@ -226,11 +234,12 @@ export default {
           console.log(res)
           // console.log(res.data.msg)
           if (res.data.msg === 'success') {
-            console.log(res.data.data)
-            // window.open(res.data.data) 
-            /*this.$http.post(res.data.data, JSON.stringify(),{headers}).then(response => {
-              console.log(response)
-            });*/
+            // console.log(JSON.parse(res.data.data).codeUrl)
+             
+              this.showCode = true;
+              this.initQCode =  JSON.parse(res.data.data).codeUrl
+  
+        
           }
         });
 
