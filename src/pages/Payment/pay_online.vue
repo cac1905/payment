@@ -205,13 +205,20 @@ export default {
           params.username = 'sim123';
          }
 
+        if (this.payType === 'unionPayOnline') {  // 网银
+          params.payType = 1;
+          params.bankCode = 'CMB';
+          params.amount = this.shu;
+        } 
+
         if (this.payType === 'jdPayOnline') {  // 京东
           params.payType = 4;
           params.bankCode = 'JDPAY';
           params.amount = this.shu;
-          // params.orderNo = `${new Date().getTime()}`;
-          params.orderNo = '8612329';
+          // params.orderNo = '8612329';
         } 
+        params.orderNo = `${new Date().getTime()}`;
+
         // this.$emit('child-step','step');
  
         this.$http.post('http://103.85.21.46:8080/onlinePay', JSON.stringify(params),{headers}).then(res => {
